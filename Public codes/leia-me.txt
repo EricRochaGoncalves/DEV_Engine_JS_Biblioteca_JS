@@ -1,0 +1,13 @@
+Essa biblioteca JavaScript foi projetada para oferecer soluções práticas e eficientes para desenvolvedores, com o foco em simplicidade e funcionalidade. Alguns códigos fornecidos são puramente JavaScript, sem dependências adicionais, e isso é intencional.
+
+Por que apenas JavaScript?
+
+A decisão de usar apenas JavaScript puro em determinadas partes da biblioteca foi tomada para garantir:
+
+Compatibilidade Universal: Os códigos em JS puro funcionam em qualquer navegador moderno sem a necessidade de carregar bibliotecas externas, garantindo maior acessibilidade.
+
+Performance Melhorada: Sem dependências adicionais, os scripts são mais leves e rápidos, contribuindo para uma melhor experiência do usuário.
+
+Facilidade de Integração: Ao evitar frameworks ou bibliotecas externas, o código pode ser facilmente incorporado em qualquer projeto, independentemente das tecnologias já em uso.
+
+Controle Total: Com JS puro, você tem acesso direto ao comportamento e ao funcionamento dos elementos, permitindo personalizações detalhadas e maior controle.
