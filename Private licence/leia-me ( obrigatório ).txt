@@ -1,0 +1,11 @@
+Direitos Autorais
+Copyright (c) [Eric Gonçalves] [2024]. Todos os direitos reservados.
+
+Você pode usar, modificar e distribuir este código livremente, mas os créditos devem ser atribuídos ao autor original (Eric Gonçalves).
+Não tente tirar algo que não é seu. O trabalho árduo tem um nome, e esse nome é meu.
+
+Isenção de Responsabilidade
+Este código é fornecido "como está", sem garantias de qualquer tipo. O autor não se responsabiliza por danos decorrentes do uso.
+
+Essa versão agora também destaca a funcionalidade do código e reforça a necessidade de pesquisa antes de apontar erros.
+
