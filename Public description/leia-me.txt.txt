@@ -1,0 +1,1 @@
+Uma biblioteca é um conjunto de códigos prontos e reutilizáveis que fornece funcionalidades específicas para facilitar o desenvolvimento de projetos. No caso do JavaScript, uma biblioteca oferece ferramentas para tarefas comuns, como manipulação de elementos, cálculos ou animações, permitindo que os desenvolvedores economizem tempo e escrevam códigos mais eficientes.
