@@ -1,0 +1,56 @@
+/* Reseta estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  /* Botão do menu */
+  .menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Estilo do menu */
+  .menu {
+    display: none; /* Menu escondido por padrão */
+    margin-top: 10px;
+  }
+  
+  .menu.active {
+    display: block; /* Mostra o menu quando ativo */
+  }
+  
+  .menu ul {
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .menu ul li {
+    margin: 5px 0;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+  
