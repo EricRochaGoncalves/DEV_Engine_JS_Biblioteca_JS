@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .tabs {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .tab-buttons {
+      display: flex;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px 20px;
+      cursor: pointer;
+      text-align: center;
+      background: #f9f9f9;
+      border: none;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
+
+    .tab-btn.active {
+      background: #fff;
+      border-bottom: 2px solid #007bff;
+      color: #007bff;
+    }
+
+    .tab-panel {
+      display: none;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid black;
+      border-top: none;
+      height: 100vh;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="tab1">Aba 1</button>
+      <button class="tab-btn" data-tab="tab2">Aba 2</button>
+      <button class="tab-btn" data-tab="tab3">Aba 3</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-panel active" id="tab1">Conteúdo da Aba 1</div>
+      <div class="tab-panel" id="tab2">Conteúdo da Aba 2</div>
+      <div class="tab-panel" id="tab3">Conteúdo da Aba 3</div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remover classes "active" de todas as abas e painéis
+        buttons.forEach(btn => btn.classList.remove('active'));
+        panels.forEach(panel => panel.classList.remove('active'));
+
+        // Ativar a aba e o painel correspondente
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
