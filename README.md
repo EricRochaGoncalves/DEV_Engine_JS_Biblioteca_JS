@@ -1,8 +1,10 @@
-# Minha Biblioteca JavaScript
 
-Esta é uma **biblioteca de código fechado**, o que significa que não pode ser importada diretamente por um link ou CDN. O acesso ao código é feito apenas por meio de **Git Bash** ou **GitHub**, onde os desenvolvedores podem clonar ou baixar diretamente para seus projetos.
+# DEV Engine JS - Biblioteca JavaScript
 
-O objetivo da biblioteca nunca foi criar algo profissional, mas sim oferecer uma solução **funcional** e de **código limpo**, pronta para ser utilizada em projetos. Todos os direitos estão reservados ao autor, e o uso do código está sujeito à **licença de direitos autorais**.  
+DEV Engine JS é uma biblioteca de código fechado, desenvolvida com o objetivo de fornecer uma solução funcional e de código limpo para desenvolvedores que buscam eficiência sem complicação. Diferente de outras bibliotecas, ela não pode ser importada diretamente via link ou CDN. O acesso ao código é exclusivo por meio de Git Bash ou GitHub, onde os desenvolvedores podem clonar ou baixar diretamente para seus projetos.
 
-Por mim, não haveria grandes complicações em relação aos direitos autorais, mas essa abordagem é uma maneira de **respeitar meu trabalho** e garantir que os créditos sejam dados de forma justa. A biblioteca é simples e eficiente, ideal para quem busca algo pronto e sem complicação.
+Esta biblioteca foi criada com a intenção de ser uma ferramenta prática e de fácil utilização, sem a necessidade de grandes configurações ou complicações. Embora o foco não tenha sido criar algo profissional, ela é altamente eficiente e pronta para uso imediato em qualquer projeto web. Todos os direitos autorais estão reservados ao autor, e o uso do código está sujeito à licença de direitos autorais.
+
+Embora a abordagem quanto aos direitos autorais seja flexível, essa medida visa garantir que o trabalho seja respeitado e que os créditos sejam dados de forma justa. A DEV Engine JS é ideal para desenvolvedores que buscam uma solução rápida, simples e funcional, com a garantia de código bem estruturado e fácil de integrar.
+
 
