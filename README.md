@@ -1,12 +1,10 @@
 # DEV Engine JS - Biblioteca JavaScript
+![DEV Engine JS](https://img.shields.io/badge/DEV%20Engine%20JS-gold)
+![JavaScript](https://img.shields.io/badge/JavaScript-gold)
 
-![Version](https://img.shields.io/badge/Version-1.0-yellow)
-![Status](https://img.shields.io/badge/Status-Active-yellow)
-![License](https://img.shields.io/badge/License-Reserved-yellow)
 
 DEV Engine JS é uma biblioteca de código fechado, desenvolvida com o objetivo de fornecer uma solução funcional e de código limpo para desenvolvedores que buscam eficiência sem complicação. Diferente de outras bibliotecas, ela não pode ser importada diretamente via link ou CDN. O acesso ao código é exclusivo por meio de Git Bash ou GitHub, onde os desenvolvedores podem clonar ou baixar diretamente para seus projetos.
 
-![GitHub](https://img.shields.io/badge/GitHub-Repo-yellow)
 
 Esta biblioteca foi criada com a intenção de ser uma ferramenta prática e de fácil utilização, sem a necessidade de grandes configurações ou complicações. Embora o foco não tenha sido criar algo profissional, ela é altamente eficiente e pronta para uso imediato em qualquer projeto web. Todos os direitos autorais estão reservados ao autor, e o uso do código está sujeito à licença de direitos autorais.
 
