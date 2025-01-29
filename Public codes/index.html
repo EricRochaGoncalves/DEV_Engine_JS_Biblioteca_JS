@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Cards</title>
+    <style>
+        /* Estilização dos cards */
+        .card {
+            width: 150px;
+            height: 200px;
+            background: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Estilização do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" onclick="abrirModal('modal1')">Card 1</div>
+    <div class="card" onclick="abrirModal('modal2')">Card 2</div>
+
+    <!-- Modais dos Cards -->
+    <div class="modal" id="modal1" onclick="fecharJanela(event, 'modal1')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal('modal1')">×</span>
+            <h2>Card 1</h2>
+            <p>Conteúdo do primeiro card.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2" onclick="fecharJanela(event, 'modal2')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal('modal2')">×</span>
+            <h2>Card 2</h2>
+            <p>Conteúdo do segundo card.</p>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function fecharModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function fecharJanela(event, id) {
+            let modal = document.getElementById(id);
+            if (event.target === modal) {
+                fecharModal(id);
+            }
+        }
+    </script>
+
+</body>
+</html>
