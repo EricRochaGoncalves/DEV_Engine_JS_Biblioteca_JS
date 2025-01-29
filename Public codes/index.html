@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Inicial</title>
+    <style>
+        /* Estilização do modal */
+        .modal {
+            display: flex; /* Inicialmente visível */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal" id="modal-inicial">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">×</span>
+            <h2>Bem-vindo!</h2>
+            <p>Este é um modal que aparece ao carregar a página.</p>
+        </div>
+    </div>
+
+    <script>
+        function fecharModal() {
+            document.getElementById("modal-inicial").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
