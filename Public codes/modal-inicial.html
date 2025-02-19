@@ -7,7 +7,7 @@
     <style>
         /* Estilização do modal */
         .modal {
-            display: flex; /* Inicialmente visível */
+            display: none; /* Inicialmente oculto */
             position: fixed;
             top: 0;
             left: 0;
@@ -27,29 +27,59 @@
             position: relative;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            cursor: pointer;
-            font-size: 20px;
+        #fechar {
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        /* Estilo do checkbox */
+        #naoLembrar {
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Modal -->
     <div class="modal" id="modal-inicial">
         <div class="modal-content">
-            <span class="close-btn" onclick="fecharModal()">×</span>
             <h2>Bem-vindo!</h2>
             <p>Este é um modal que aparece ao carregar a página.</p>
+            <label for="naoLembrar">
+                <input type="checkbox" id="naoLembrar"> Não me lembre mais
+            </label>
+            <br>
+            <button id="fechar" onclick="fecharModal()">Fechar</button>
         </div>
     </div>
 
     <script>
+        // Função para fechar o modal manualmente
         function fecharModal() {
             document.getElementById("modal-inicial").style.display = "none";
         }
+
+        // Função que lida com o localStorage para exibir ou não o modal
+        document.addEventListener("DOMContentLoaded", function () {
+            // Verifica se o item "naoMostrarModal" está salvo no localStorage
+            if (!localStorage.getItem("naoMostrarModal")) {
+                // Exibe o modal se a chave não estiver no localStorage
+                document.getElementById("modal-inicial").style.display = "flex";
+            }
+
+            // Adiciona o evento ao checkbox
+            document.getElementById("naoLembrar").addEventListener("change", function () {
+                // Verifica se a checkbox foi marcada
+                if (this.checked) {
+                    // Marca no localStorage para não mostrar o modal novamente
+                    localStorage.setItem("naoMostrarModal", "true");
+                    // Fecha o modal
+                    document.getElementById("modal-inicial").style.display = "none";
+                }
+            });
+        });
     </script>
 
 </body>
