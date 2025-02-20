@@ -1,5 +1,5 @@
 .carrossel-container {
-    width: 600px; /* Largura do carrossel */
+    width: 100%; /* Tornar o carrossel responsivo */
     overflow: hidden;
     margin: auto;
 }
@@ -10,6 +10,6 @@
 }
 
 .carrossel img {
-    width: 100%; /* Garantir que as imagens ocupem toda a largura do carrossel */
-    height: auto; /* Ajustar a altura proporcionalmente */
+    width: 100%; /* As imagens ocupam 100% da largura do carrossel */
+    height: auto; /* Manter a altura proporcional */
 }
