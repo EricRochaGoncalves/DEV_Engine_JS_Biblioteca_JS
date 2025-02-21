@@ -1,15 +1,20 @@
 .carrossel-container {
-    width: 100%; /* Tornar o carrossel responsivo */
+    width: 100%;
+    max-width: 500px; /* Define um limite para telas grandes */
     overflow: hidden;
     margin: auto;
+    position: relative;
 }
 
 .carrossel {
     display: flex;
+    width: 300%; /* Se tiver 3 imagens, 100% * 3 */
     transition: transform 0.5s ease-in-out;
 }
 
 .carrossel img {
-    width: 100%; /* As imagens ocupam 100% da largura do carrossel */
-    height: auto; /* Manter a altura proporcional */
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    max-width: 500px; /* Garante que não fique maior que o container */
+    height: auto;
+    flex-shrink: 0; /* Impede que as imagens encolham */
 }
