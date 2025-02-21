@@ -12,8 +12,8 @@ function mudarImagem(direction) {
         currentIndex = 0; // Volta para a primeira imagem
     }
 
-    // Calcula a largura das imagens
-    const imageWidth = images[0].clientWidth;
+    // Muda a posição do carrossel
+    const imageWidth = images[0].offsetWidth; // Usa offsetWidth para garantir a largura correta
 
     // Muda a posição do carrossel
     carrossel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
