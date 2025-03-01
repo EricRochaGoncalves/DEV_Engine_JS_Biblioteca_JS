@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal de Cards</title>
+    <title>Modal de Card</title>
     <style>
-        /* Estilização dos cards */
+        /* Estilização do card */
         .card {
             width: 150px;
             height: 200px;
@@ -14,7 +14,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            margin: 10px;
+            margin: 10px auto;
             border-radius: 8px;
             text-align: center;
         }
@@ -40,51 +40,28 @@
             width: 300px;
             position: relative;
         }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            cursor: pointer;
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
 
-    <div class="card" onclick="abrirModal('modal1')">Card 1</div>
-    <div class="card" onclick="abrirModal('modal2')">Card 2</div>
+    <div class="card" onclick="abrirModal()">Abrir Modal</div>
 
-    <!-- Modais dos Cards -->
-    <div class="modal" id="modal1" onclick="fecharJanela(event, 'modal1')">
+    <!-- Modal -->
+    <div class="modal" id="modal" onclick="fecharModal(event)">
         <div class="modal-content">
-            <span class="close-btn" onclick="fecharModal('modal1')">×</span>
-            <h2>Card 1</h2>
-            <p>Conteúdo do primeiro card.</p>
-        </div>
-    </div>
-
-    <div class="modal" id="modal2" onclick="fecharJanela(event, 'modal2')">
-        <div class="modal-content">
-            <span class="close-btn" onclick="fecharModal('modal2')">×</span>
-            <h2>Card 2</h2>
-            <p>Conteúdo do segundo card.</p>
+            <h2>Conteúdo do Card</h2>
+            <p>Este é um modal simples.</p>
         </div>
     </div>
 
     <script>
-        function abrirModal(id) {
-            document.getElementById(id).style.display = "flex";
+        function abrirModal() {
+            document.getElementById("modal").style.display = "flex";
         }
 
-        function fecharModal(id) {
-            document.getElementById(id).style.display = "none";
-        }
-
-        function fecharJanela(event, id) {
-            let modal = document.getElementById(id);
-            if (event.target === modal) {
-                fecharModal(id);
+        function fecharModal(event) {
+            if (event.target.id === "modal") {
+                document.getElementById("modal").style.display = "none";
             }
         }
     </script>
