@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel de Testemunhos</title>
+  <style>
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+    }
+
+    .carousel-item h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .carousel-item p {
+      font-style: italic;
+      color: #666;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="carousel-container">
+      <div class="carousel-item">
+        <h3>João Silva</h3>
+        <p>"Este produto realmente superou minhas expectativas! Recomendo a todos!"</p>
+      </div>
+      <div class="carousel-item">
+        <h3>Maria Oliveira</h3>
+        <p>"A experiência foi incrível. Atendimento excelente e o produto é de alta qualidade!"</p>
+      </div>
+      <div class="carousel-item">
+        <h3>Lucas Almeida</h3>
+        <p>"Muito satisfeito com a compra! Com certeza vou voltar para mais produtos."</p>
+      </div>
+    </div>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let index = 0;
+
+    function moveSlide(step) {
+      const items = document.querySelectorAll('.carousel-item');
+      index += step;
+      if (index < 0) index = items.length - 1;
+      if (index >= items.length) index = 0;
+
+      // Oculta todos os itens
+      items.forEach(item => item.style.display = 'none');
+
+      // Exibe o item atual
+      items[index].style.display = 'block';
+    }
+
+    // Inicializa o primeiro item
+    moveSlide(0);
+  </script>
+
+</body>
+</html>
