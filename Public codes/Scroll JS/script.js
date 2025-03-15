@@ -15,3 +15,18 @@ navLinks.forEach(link => {
         });
     });
 });
+
+Teste secundário
+
+
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
