@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Claro/Escuro</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+            font-size: 18px;
+        }
+
+        .dark-mode a {
+            color: #1e90ff;
+        }
+
+        .dark-mode button {
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        button {
+            padding: 10px;
+            margin: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="toggleDarkMode()">Alternar Tema</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+        }
+
+        // Mantém a preferência do usuário
+        window.onload = function() {
+            if (localStorage.getItem("darkMode") === "true") {
+                document.body.classList.add("dark-mode");
+            }
+        };
+    </script>
+
+</body>
+</html>
