@@ -22,23 +22,31 @@
             color: #1e90ff;
         }
 
-        .dark-mode button {
+        .dark-mode .ToggleDarkButton {
             background-color: #333;
             color: white;
             border: 1px solid #555;
         }
 
-        button {
+        .ToggleDarkButton {
             padding: 10px;
             margin: 20px;
             cursor: pointer;
             font-size: 16px;
+            background-color: #ddd;
+            color: black;
+            border: 1px solid #aaa;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .ToggleDarkButton:hover {
+            background-color: #bbb;
         }
     </style>
 </head>
 <body>
 
-    <button onclick="toggleDarkMode()">Alternar Tema</button>
+    <button class="ToggleDarkButton" onclick="toggleDarkMode()">Alternar Tema</button>
 
     <script>
         function toggleDarkMode() {
