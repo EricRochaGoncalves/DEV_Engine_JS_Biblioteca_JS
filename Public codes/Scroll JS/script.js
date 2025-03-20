@@ -1,5 +1,5 @@
 // Seleciona todos os links de navegação
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('[href]');
 
 // Função de rolagem suave
 navLinks.forEach(link => {
