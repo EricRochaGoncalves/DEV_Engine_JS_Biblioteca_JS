@@ -1,26 +1,35 @@
-const toggleButton = document.getElementById('toggleModal');
-const closeButton = document.getElementById('closeModal');
-const closeExtraButton = document.getElementById('closeModalButton'); // Novo botão
-const modal = document.getElementById('modal');
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os botões que abrem um modal
+    const openButtons = document.querySelectorAll(".openModal");
+    const closeButtons = document.querySelectorAll(".closeModal");
 
-// Função toggle para abrir e fechar o modal
-function toggleModal() {
-  modal.classList.toggle('visible'); // Adiciona/remove a classe 'visible'
-}
+    // Adiciona evento para abrir o modal correto
+    openButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add("visible");
+            }
+        });
+    });
 
-// Função para fechar o modal (remove a classe 'visible')
-function closeModal() {
-  modal.classList.remove('visible');
-}
+    // Adiciona evento para fechar o modal correspondente
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = button.closest(".modal");
+            if (modal) {
+                modal.classList.remove("visible");
+            }
+        });
+    });
 
-// Eventos
-toggleButton.addEventListener('click', toggleModal); // Abre/fecha o modal
-closeButton.addEventListener('click', closeModal); // Fecha o modal pelo botão no canto superior
-closeExtraButton.addEventListener('click', closeModal); // Fecha o modal pelo botão adicional
-
-// Fechar o modal clicando fora dele
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    closeModal();
-  }
+    // Fecha o modal se o usuário clicar fora dele
+    window.addEventListener("click", (event) => {
+        document.querySelectorAll(".modal").forEach(modal => {
+            if (event.target === modal) {
+                modal.classList.remove("visible");
+            }
+        });
+    });
 });
