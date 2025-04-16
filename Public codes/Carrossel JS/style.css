@@ -1,20 +1,47 @@
-.carrossel-container {
-    width: 100%;
-    max-width: 500px; /* Define um limite para telas grandes */
-    overflow: hidden;
-    margin: auto;
-    position: relative;
-}
+
 
 .carrossel {
-    display: flex;
-    width: 300%; /* Se tiver 3 imagens, 100% * 3 */
-    transition: transform 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.carrossel img {
-    width: 100vw; /* Ocupa toda a largura da viewport */
-    max-width: 500px; /* Garante que não fique maior que o container */
-    height: auto;
-    flex-shrink: 0; /* Impede que as imagens encolham */
+.carrossel-inner {
+  display: flex;
+  width: 300vw;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-item {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.carrossel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.botao {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.botao.esquerda {
+  left: 10px;
+}
+
+.botao.direita {
+  right: 10px;
 }
